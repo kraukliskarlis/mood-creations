@@ -1,0 +1,550 @@
+/*---------------------------------------
+Author: Kārlis Krauklis
+-----------------------------------------*/
+/*============================================================
+CLEAR FIX
+===========================================*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+* For IE 6/7 only
+* Include this rule to trigger hasLayout and contain floats.
+*/
+.cf {
+    *zoom: 1;
+}
+
+/*============================================================
+BASE STYLES
+===========================================*/
+
+/*-- border-box --*/
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/*-- Fonts --*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+small {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+p {
+    line-height: 24px;
+}
+
+/*-- ul style --*/
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+.fa {
+    color: #fff;
+}
+
+
+/*=============================================================
+BASE LAYOUT STYLES
+===========================================*/
+
+/*-- LAYOUT CONTAINERS --*/
+
+header {
+    background: rgba(225, 124, 107, 0.7);
+    padding: 1px;
+}
+
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/*-- padding for all sections -------------------------*/
+
+.pakalpojumi-section, .musu-darbi-section,
+.musu-komanda-section, .sazinaties-section, .main-footer 
+{padding: 1px;}
+
+.pakalpojumi-section {
+    background: #d33523;
+}
+
+
+
+/*-- GRID -------------------------*/
+
+.col {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 70px;
+
+}
+
+/*=============================================================
+HELPER CLASSES
+===========================================*/
+
+/*-- text align --------*/
+
+.align-center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+/*-- image --------*/
+.responsive-img {
+    max-width: 100%;
+}
+
+
+.title {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 46px;
+}
+
+.title-sm {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/*-- custom typography styles --*/
+
+.line-height-30 {
+    line-height: 30px;
+}
+
+/*-- margins-top --*/
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+
+/*=============================================================
+HEADER, LOGO, NAV, TRIGGER STYLES
+===========================================*/
+
+/*-- header --------*/
+
+
+/*-- logo --------*/
+
+.logo {
+    background: url(../img/Logo%20VERTIK%C4%80LI.png) top left no-repeat;
+    text-indent: -999999px;
+    color: #fff;
+    padding: 10px 23px;
+    font-size: 29px;
+    margin: 9px auto;
+    display: block;
+    max-width: 25px;
+
+}
+/*-- nav style --------*/
+
+#menu ul {
+    text-align: center;
+    display: block;
+}
+
+#menu li a{
+    display: block;
+    padding: 10px;
+    border-bottom: solid 1px #fff;
+    color: #fff;
+}
+
+#menu {
+    display: none;
+}
+
+/*-- nav-trigger --------*/
+
+.nav-trigger {
+    position: absolute;
+    top: 16px;
+    right: 6%;
+    padding: 10px;
+    margin: 
+
+}
+
+
+/*=============================================================
+SECTIONS
+===========================================*/
+
+
+
+
+/* portfolio overlay styles   */
+.image-container {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.image-container img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.image-container .hover-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+
+
+.image-container  .hover-container {
+    background-color: rgba(82, 141, 88, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+
+}
+
+.image-container .hover-container:hover{
+    opacity: 1;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.image-container .hover-text p {
+    margin-bottom: 0;
+}
+
+.image-container .hover-text small p{
+    margin: 0;
+}
+
+/*
+.image-container .hover-text:hover {
+    opacity: 1;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+*/
+
+
+
+
+/*=========================================
+BASE LAYOUT STYLES
+===========================================*/
+
+
+
+
+
+
+/*-- Banner --*/
+
+#banner {
+    background-image: url(../img/bg-img.jpg);
+    background-size: cover;
+}
+
+.hero-logo {
+    padding-top: 50px;
+}
+
+.social-container i {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.social-container i:hover {
+    color: rgba(250, 250, 250, 0.6);
+}
+
+/*-- Pakalpojumi --*/
+
+
+
+/*-- Musu darbi --*/
+.musu-darbi-section {
+    background: url(../img/greenbg.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+nav.portfolio-nav a {
+    display: block;
+    margin: 10px 0px;
+    border: solid 1px #fff;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+nav.portfolio-nav a:hover {
+    color: #7AB07C;
+    background: #fff;
+}
+
+
+
+.img-portfolio {
+    margin-top: 0;
+}
+
+.img-portfolio img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#musu-komanda {
+    background: #57aa68;
+}
+
+/*sazinaties section*/
+
+.sazinaties-section {
+    padding: 10px;
+    background-image: url(../img/sazinaties-bg.jpg);
+    background-size: cover;
+}
+
+/*footer*/
+
+footer {
+    background: #2e2d6b;
+    padding: 10px;
+}
+
+/*=============================================================
+MEDIA QUERIES
+===========================================*/
+
+/*-- MD-SCREEN --*/
+
+@media (min-width: 769px) {
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .container-musu-darbi {
+        width: 80%;
+        max-width: 940px;
+        margin: 0 auto;
+    }
+
+    /*-- logo -- */
+
+    .logo {
+        display: inline-block;
+    }
+
+    /*=============================================================
+    NAV, SECTION STYLES
+    ===========================================*/
+
+    /*-- header --*/
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: -1px;
+        z-index: 100;
+    }
+
+    /*-- nav --*/
+
+    nav#menu {
+        display: inline-block;
+        float: right;
+    }
+
+    nav#menu li {
+        display: inline-block;
+        border-bottom
+    }
+
+    nav#menu li a {
+        border-bottom: none;
+    }
+
+    nav#menu .nav-link:active {
+        border-top-color: rgba(250, 250, 250, 0.6);
+    }
+    
+    nav#menu li a {
+    padding: 22px 10px;
+    border-top: solid 4px transparent;
+    }
+        
+    nav#menu li a:hover {
+        border-top-color: rgba(250, 250, 250, 0.6);
+        transition: all 1s ease;
+    }
+
+    .nav-trigger {
+        display: none;
+    }
+
+    /*-- banner --*/
+
+    .hero-logo {
+        padding-top: 144px;
+        padding-bottom: 38px;
+    }
+
+
+    .social-container {
+        padding-top: 10px;
+        padding-bottom: 24px;
+    }
+
+    /*-- banner --*/
+
+    .col {
+        display: inline-block;
+        width: 24%;
+        vertical-align: top;
+        padding: 0 12px;
+    }
+
+
+    .img-portfolio img {
+        float: left;
+        width: auto;
+    }
+    
+    
+/* section musu darbi   */
+    
+    button.btn-1.btn-active {
+        width: 8px;
+        height: auto;
+        padding: 4px;
+        border-radius: 8px;
+        margin: 6px;
+        background-color: #fff;
+        border: solid 1px #fff;
+    
+    }
+    
+    button.btn-1 {
+        width: 8px;
+        height: auto;
+        padding: 4px;
+        border-radius: 8px;
+        margin: 6px;
+        background-color: transparent;
+        border: solid 1px rgba(250, 250, 250, 0.2);
+    }
+    
+    
+    nav.portfolio-nav {
+        display: inline-block;
+    }
+    
+    nav.portfolio-nav a {
+        display: inline-block;
+        margin: 10px 25px;
+        border: solid 1px transparent;
+        padding: 10px 10px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    nav.portfolio-nav .active a {
+        border: solid 1px #fff;
+        border-radius: 5px;
+    }
+    
+    nav.portfolio-nav a:hover {
+        color: #fff;
+        background: transparent;
+        border: solid 1px #fff;
+        border-radius: 5px;
+    }
+    
+    .btn-container {
+        margin-bottom: 31px;
+    }
+    
+    .btn-1 {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+    }
+    
+    .image-container {
+        width: 25%;
+    }
+    
+    .image-container img {
+/*        width: auto;*/
+    }
+    
+} 
+
+
+
+
+
+
+
+
+
+
+
